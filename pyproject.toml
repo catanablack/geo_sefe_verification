@@ -1,0 +1,31 @@
+[project]
+name = "geo-safe-verification"
+version = "0.1.0"
+description = "Real-Time Geometric Safety Verification Platform for autonomous vehicle motion planning"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "open3d>=0.18",
+    "scikit-image>=0.22",
+    "torch>=2.2",
+    "torch-geometric>=2.5",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
